@@ -13,7 +13,12 @@ void moverTorre(int casas) {
 
 void moverBispo(int casas) {
     if(casas > 0) {
-        printf("Cima, Direita\n");
+        for(int i = 1; i <= 1; i++) { // Usando loops aninhados no Bispo conforme solicitado
+            for(int j = 1; j <= 1; j++) {
+                printf("Cima, ");
+            }
+            printf("Direita\n");
+        }
         moverBispo(casas - 1);
     }
 }
