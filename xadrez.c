@@ -7,11 +7,14 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     int i, bispo = 5, torre = 5, rainha = 8;
-    printf("Bem vindo(a) ao jogo de Xadrez!\n");
+    int cavaloHorizontal = 1, cavaloVertical = 2, opcao;
+    printf("### Bem vindo(a) ao jogo de Xadrez! ###\n");
 
     // Implementação de Movimentação do Bispo
-    printf("Quantas casas o bispo deve andar na diagonal superior direita?\n");
+    printf("\n");
+    printf("### Quantas casas o bispo deve andar na diagonal superior direita?\n");
     scanf("%d", &bispo);
+    printf("\n");
 
     i = 1;
     while(i <= bispo) {
@@ -20,8 +23,10 @@ int main() {
     }
 
     // Implementação de Movimentação da Torre
-    printf("Quantas casas a torre deve andar para a direita?\n");
+    printf("\n");
+    printf("### Quantas casas a torre deve andar para a direita?\n");
     scanf("%d", &torre);
+    printf("\n");
 
     i = 1;
     do {
@@ -30,16 +35,45 @@ int main() {
     } while (i <= torre);
 
     // Implementação de Movimentação da Rainha
-    printf("Quantas casas a rainha deve andar para a esquerda?\n");
+    printf("\n");
+    printf("### Quantas casas a rainha deve andar para a esquerda?\n");
     scanf("%d", &rainha);
+    printf("\n");
 
     for(i = 1; i <= rainha; i++) {
         printf("Esquerda\n");
     }
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("\n");
+    printf("### Selecione se o cavalo deve ir para a esquerda ou direita:\n");
+    printf("1. Esquerda\n");
+    printf("2. Direita\n");
+    scanf("%d", &opcao);
+    printf("\n");
+
+    for(int j = 1; j <= cavaloHorizontal; j++) {
+        int k = 1;
+
+        while(k <= cavaloVertical) {
+            printf("Baixo\n");
+            k++;
+        }
+        
+        switch(opcao) {
+            case 1:
+                printf("Esquerda\n");
+                break;
+            case 2:
+                printf("Direita\n");
+                break;
+            default:
+                printf("Opcao invalida\n");
+                break;
+        } 
+    }
+
+    printf("\n\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
